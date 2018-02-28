@@ -1,0 +1,135 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    height: 210px;
+}
+
+iframe {
+    height: 200px;
+    width: 400px;
+}
+
+p {
+    margin: 20px;
+}
+
+label {
+    margin: 20px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #313131;
+}
+
+.nav {
+    height: 100%;
+}
+
+.vidyah {
+    text-align: center;
+}
+
+.spacingDiv {
+    height: 50px;
+    width: 100%;
+}
+
+.spacingDivSmall {
+    height: 20px;
+    width: 100%;
+}
+
+.topHeading {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    color: #4d586b;
+}
+
+.heading {
+    font-weight: bold;
+    text-align: center;
+    color: #4d586b;
+    font-size: 1.1em;
+}
+
+.content {
+    background: #4d586b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+select {
+    margin: 20px;
+}
+
+.chartHeading {
+    text-align: center;
+    font-size: 2em;
+}
+
+.plotArea {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input {
+    display: none;
+}
+
+.grow0 {
+    max-height: 20px;
+    transition: max-height 1s ease;
+}
+
+.grow0:hover {
+    max-height: 500px;
+    transition: max-height 4s ease;
+}
+
+.grow1 {
+    max-height: 20px;
+    transition: max-height 1s ease;
+}
+
+.grow1:hover {
+    max-height: 500px;
+    transition: max-height 4s ease;
+}
+
+.grow2 {
+    max-height: 20px;
+    transition: max-height 1s ease;
+}
+
+.grow2:hover {   
+    max-height: 500px;
+    transition: max-height 4s ease;
+}
+
+.grow3 {
+    max-height: 20px;
+    transition: max-height 1s ease;
+}
+
+.grow3:hover {   
+    max-height: 500px;
+    transition: max-height 4s ease;
+}

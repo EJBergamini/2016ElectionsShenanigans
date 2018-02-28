@@ -5,154 +5,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" sizes="192x192"  href="${pageContext.request.contextPath}/Image/1.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="1.png">
     <title>Index</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Local CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/BlogStyle.css">
+    <link rel="stylesheet" href="2016electionsshenanigans.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
 </head>  
-  
+
 <body>
-    <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3 class="blogCenter">Our Blog</h3>
-            </div>
-            <h4 id="links">Links:</h4>
-            <ul class="list-unstyled components" id="sidebarList">                   
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Posts By Category:</a>                       
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="${pageContext.request.contextPath}/">Our Most Recent Posts</a></li>
-                        <c:forEach var="cvm" items="${cvm}" varStatus="loop">
-                        <li><a href="${pageContext.request.contextPath}/BlogByCategory/byCategory?categoryId=${cvm.categoryId}"><c:out value="${cvm.categoryName}"></c:out></a></li>
-                        </c:forEach>
-                    </ul>                    
-                </li>
-                <li>
-                    <a href="${pageContext.request.contextPath}/CreatePost/CreatePost">Create A Post</a>
-                </li>
-                <c:forEach var="spvm" items="${spvm}" varStatus="loop">
-                <li>
-                    <a href="${pageContext.request.contextPath}/StaticPage/displaySelectedStaticPage?staticPageId=${spvm.staticPageId}">${spvm.staticPageTitle}</a>
-                </li>
-                </c:forEach>
-                <li class="lineSide"></li>
-                <li>
-                    <a href="${pageContext.request.contextPath}/jsp/AdminHome.jsp">Admin</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="" id="content">
-            <div class="container-fluid" id="topbar">
-                <nav class="col-xs-12 navbar navbar-default" id="topbar1">
-                    <div class="col-xs-3 col-md-3 navbar-header" id="topbar2">
-                        <button type="button" id="sidebarCollapse" class="navbar-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                    <div class="col-xs-9 col-md-9" id="">
-                        <ul class="nav col-xs-12 navbar-nav navbar-right" id="topbuttons">
-                            <li class="topbuttons">
-                                <button type="button" class="btn-sm btn-primary formbuffer" id="formdropdown">Login<span id="loginarrow"> ▼</span></button>
-                                <div id="login">
-                                    <form class="form-group form-group-sm" id="userLogin" commandName="ucm" action="${pageContext.request.contextPath}/Login/userLogin" method="POST">
-                                    <div class="col-xs-12 logincontent">
-                                        <label class="col-md-12" for="userName">Username:</label>
-                                        <input class="col-md-12 form-control" name="userName" autocomplete="username" id="userName" type="text" placeholder="Your Username" path="userName"/>
-                                    </div>
-                                    <div class="col-xs-12 logincontent">
-                                        <label class="col-md-12" for="password">Password:</label>
-                                        <input class="col-md-12 form-control" name="password" autocomplete="current-password" id="password" type="password" placeholder="Your Password" path="userPassword"/>
-                                    </div>
-                                    <div class="col-xs-12 logincontent">
-                                        <button type="submit" class="col-xs-6 btn-sm btn-primary formbuffer" id="loginButton">Submit</button>
-                                        <div class="col-xs-6"></div>                                           
-                                    </div>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="topbuttons">
-                                <button type="button" class="btn-sm btn-primary formbuffer"><a href="${pageContext.request.contextPath}/">Logout</a></button>
-                            </li>
-                            <li class="topbuttons">
-                                <button type="button" class="btn-sm btn-primary formbuffer"><a href="${pageContext.request.contextPath}/Registration/createUserForm">Register</a></button>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-xs-12 lineTop"></div>
+    <header>       
+    </header>
+    <div class="wrapper container-fluid">
+        <div class="spacingDiv col-xs-12"></div>
+        <nav class="container-fluid">
             <div class="col-xs-12">
-            <c:forEach items="${pvm.spvms}" var="currentSpvm" varStatus="loop">                       
-                <c:if test="${(currentSpvm.post.approval) && (currentSpvm.post.startDate) < (date)}">
-                <div class="col-xs-12 apost">                        
-                    <div class="col-xs-12">                            
-                        <div class="col-md-1"></div>
-                        <div class="col-xs-12 col-md-10">
-                            <h2>${currentSpvm.post.postTitle}</h2>
+                <div class="col-xs-1 nav"></div>
+                <div class="col-xs-3 nav"><img id="bear" style="display: none;" src="2.png"/></div>
+                <div class="col-xs-4 nav vidyah"><iframe id="borisNatasha" style="display: none;" src="https://www.youtube.com/embed/WQhggbxh9og?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                <div class="col-xs-3 nav"><img id="eagle" style="display: none;"  src="3.png"/></div>
+                <div class="col-xs-1 nav"></div>
+            </div>
+        </nav>
+        <div class="container-fluid col-xs-12">
+            <div class="spacingDiv col-xs-12"></div>
+            <div class="col-xs-12 topHeading"><p>A Quick Look Into Russian Twitter Trolling During the 2016 Election</p></div>
+            <div class="spacingDivSmall col-xs-12"></div>
+            <div class="col-xs-12">
+                <div class="col-xs-12">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2 heading">
+                        <p>Brief:</p>
+                    </div>
+                    <div class="col-xs-6 content grow0">
+                        <p>On 02.14.18 NBC News released a story (<a href="https://www.nbcnews.com/tech/social-media/now-available-more-200-000-deleted-russian-troll-tweets-n844731" target="_blank">NBC Exposé</a>) indicating the level and scale of Russian meddling in the USA 2016 Presidential election.
+                        Included in NBC's story were several CSV files full of Russian identified troll accounts that Twitter has retroactively deleted. Regardless of your political leanings it is well established fact at this point that the meddling both A: occurred, and B: was conducted by Russians (less concretely: with the Russian government's support and consent). 
+                        This tactic has also occurred during the democratic processes of Western European nations (<a href="https://www.usatoday.com/story/news/world/2017/09/07/alleged-russian-political-meddling-documented-27-countries-since-2004/619056001/">USA Today List</a>). There is, to an extent (in my own view), an uncanny irony in that we were targeted so easily by foreigners using communications technologies that we invented.</p>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <div class="spacingDivSmall col-xs-12"></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2 heading">
+                        <p>What's This Page For?:</p>
+                    </div>
+                    <div class="col-xs-6 content grow1">
+                        <p>
+                            I created this page for a couple of reasons, one being that my original studies involved International Relations (a mixture of Political Science, Economics, and Geography), I earned a BA in IR at Kent State University.
+                            Now that I'm moving in the direction of a career in programming/web development I found the opportunity of parsing through a large dataset of evidence from a political hack simply too good to pass up.
+                        </p>                        
+                        <p>
+                            The other reason is that I wanted to 'get something out there' demonstrating my coding ability while I work on getting my other 'true' full-stack DDWA projects live and online.
+                        </p>
+                        <p>
+                            Methodology: I downloaded NBC's CSVs for data scientists from their story, parsed the CSVs to JSON arrays consisting of both an array of Twitter account objects and one consisting of Twitter post objects associated with Twitter identified Russian troll accounts. I then began extracting the data using AJAX calls locally against the parsed JSON files to 'see what I could glean'. The charts are made possible by a great JS CDN called Plot.ly. The source code for this project is located on my Github page (<a href="https://github.com/EJBergamini/2016ElectionsShenanigans" target="_blank">2016ElectionsShenanigans</a>).
+                        </p>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <div class="spacingDivSmall col-xs-12"></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2 heading">
+                        <p>How To Use This?:</p>
+                    </div>
+                    <div class="col-xs-6 content grow2">
+                        <p>
+                            The volume of posts that NBC captured is large (over 200k); thus, though the data is iterated on the client side efficiently enough, displaying individual posts would freeze your browser. For the sake of transparency, or if you want to check me, you can get the JSONs on my Github page (above) or grab them from your browser's devtools.
+                        </p>
+                        <p>
+                            This page is not formatted for nor meant for display on mobile devices; in addition, the content will not display on Chrome, use Firefox or Edge instead as alternatives for now.
+                        </p>    
+                        <p>
+                            Select a chart from the dropdown below to see '2016 Elections Shenanigans' in action. The last selection allows you to create your own query (ex.: Obama - will generate results):
+                        </p>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <div class="spacingDiv col-xs-12"></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2 heading">
+                        <label for="select">Select an Option:</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <select class="col-xs-12" id="select">
+                            <option class="reset" selected>Select a Chart ▼</option>
+                            <option class="reset" id="freqAll">Bar - Frequency of All Posts (x=time, y=posts per month)</option>
+                            <option class="reset" id="freqCreate">Bar - Frequency of Account Creation (x=time, y=posts per month)</option>
+                            <option class="reset" id="freqHillary">Bar - Frequncy of Posts Containing the Word 'Hillary' (x=time, y=posts per month)</option>
+                            <option class="reset" id="freqRetweet">Bar - Frequency of Retweeted (i.e.: exposure, x=time, y=retweets per month)</option>
+                            <option class="reset" id="freqFav">Bar - Frequency of Favorites (i.e.: exposure, x=time, y=favorites per month)</option>                               
+                            <option class="reset" id="cntRetweet">Pie - Count of Retweeted (i.e.: exposure, vs. all posts)</option>
+                            <option class="reset" id="cntFav">Pie - Count of Favorites (i.e.: exposure, vs. all posts)</option>
+                            <option class="reset" id="cntTz">Pie - Account Time Zone Where != EST, CST, PST</option>
+                            <option class="reset" id="cntFollow">Pie - Accounts With Followers</option>
+                            <option class="reset" id="cntCrooked">Pie - Mentions of the Word 'Crooked'</option>
+                            <option class="reset" id="cntTrump">Pie - Mentions of the Word 'Trump'</option>
+                            <option class="reset" id="cntClinton">Pie - Mentions of the Word 'Clinton'</option>
+                            <option class="reset" id="cntRt">Pie - Mentions of the Word 'RT' (cites RT, a Russian propaganda outlet)</option>
+                            <option class="reset" id="cntBlm">Pie - Mentions of the Word 'BlackLivesMatter'</option>
+                            <option class="reset" id="cntPotus">Pie - Mentions of the Word 'POTUS'</option>
+                            <option class="reset" id="cntFakenews">Pie - Mentions of the Word 'FakeNews'</option>
+                            <option class="reset" id="cntBuildWall">Pie - Mentions of the Word 'BuildTheWall'</option>
+                            <option id="cntMakeOwn">Pie - Mentions of the Word 'User Choice' (experimental)</option>
+                        </select>
+                        <div class="col-xs-12 input">
+                            <input class="col-xs-8" placeholder="Pie - Enter a word to search here." id="input"/>
+                            <button class="btn-btnsm btn-primary" id="cntMakeOwnBtn">Submit</button>
+                        </div>                           
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <div class="spacingDivSmall col-xs-12"></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-12 heading chartHeading"></div>
+                    <div class="col-xs-12 plotArea">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-8">
+                            <div class="col-xs-12" id="plot"></div>
                         </div>
-                        <div class="col-md-1"></div>
-                    </div>                          
-                    <div class="col-xs-12 spacingDiv"></div>                       
-                    <div class="col-xs-12">
-                        <div class="col-md-1"></div>
-                        <div class="col-xs-4 col-md-2"><p class="postHeading">Posted By:</p></div>
-                        <div class="col-xs-8 col-md-8"><p>${currentSpvm.post.user.userName}</p></div>                                    
-                        <div class="col-md-1"></div>
-                    </div>                               
-                    <div class="col-xs-12">    
-                        <div class="col-md-1"></div>
-                        <div class="col-xs-4 col-md-2"><p class="postHeading">Category:</p></div>
-                        <div class="col-xs-8 col-md-8"><p>${currentSpvm.post.category.categoryName}</p></div>                                    
-                        <div class="col-md-1"></div>
-                    </div>                            
-                    <div class="col-xs-12">    
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-xs-12 col-md-8"><p>${currentSpvm.post.postContent}</p></div>                                    
-                        <div class="col-md-1"></div>
-                    </div>  
-                    <c:if test="${fn:length(currentSpvm.hashtags) > (0)}">    
-                    <div class="col-xs-12">    
-                        <div class="col-md-1"></div>
-                            <div class="col-xs-4 col-md-2"><p class="postHeading">Hashtags:</p></div>
-                            <div class="col-xs-8 col-md-8">
-                                <p>                                    
-                                <c:forEach items="${currentSpvm.hashtags}" var="currentHashtag" varStatus="loop">
-                                    <a href="${pageContext.request.contextPath}/BlogHome/ByHashtag?hashtagId=${currentHashtag.hashtagId}">
-                                    <c:out value="${currentHashtag.tagName}"/>
-                                    </a>
-                                </c:forEach>                                 
-                                </p>
-                            </div>                                                               
-                        <div class="col-md-1"></div>
-                    </div> 
-                    </c:if>
-                    <div class="col-xs-12">    
-                        <div class="col-md-1"></div>
-                            <div class="col-xs-4 col-md-2"><p class="postHeading">Posted On:</p></div>
-                            <div class="col-xs-8 col-md-8">
-                                <p>
-                                <fmt:parseDate value="${currentSpvm.post.startDate}" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime" type="both" />
-                                <fmt:formatDate pattern="MM/dd/yyyy hh:mm a" value="${parsedDateTime}" />
-                                </p>
-                            </div>                                    
-                        <div class="col-md-1"></div>
-                    </div>                           
-                </div> 
-                <div class="col-xs-12 spacingDiv"></div>
-                <div class="col-xs-12 line"></div>                 
-                </c:if>                     
-            </c:forEach>  
+                        <div class="col-xs-2"></div>
+                    </div>
+                </div>
+                <div class="spacingDivSmall col-xs-12"></div>
+                <div class="col-xs-12">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-2 heading">
+                        <p>Bonus:</p>
+                    </div>
+                    <div class="col-xs-6 content grow3">                                                       
+                        <p>
+                            The bonus animated youtube clip which should have appeared at the top by now is from one of my favorite childhood animated series: Rocky and Bullwinkle. The characters depicted are "Boris and Natasha" two spies from the evil "Pottsylvania". 
+                            The highly stylized Russian accent was by design to highlight the perpetual cat and mouse espionage game that the Cold War was. Since the shenanigans apparently continue today I found it a humourous yet relevant addition to this page.
+                        </p>
+                        <p>
+                            If you have a suggesion/find an error, or want me to update for additional data conditions you're welcome to reach-out at: ejbergamini@gmail.com. If you are looking for someone with data manipulation/presentation skills like these to collaborate with I am open to suggestion.
+                        </p>
+                        <p>
+                            Conversely, I'm not interested in a debate regarding whether or not meddling did or did not happen, as far as I am concerned the issue is closed. Remit 'alternative fact' theories instead to <a href="https://www.reddit.com/r/politics/">/r/politics</a>.
+                        </p>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <div class="spacingDivSmall col-xs-12"></div>
             </div>
         </div>
     </div>
+    
     <footer>           
     </footer>
+
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap Js CDN -->
@@ -160,6 +166,9 @@
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <!-- Our JS file -->
-    <script src="${pageContext.request.contextPath}/js/BlogJavascript.js" type="text/javascript"></script>       
+    <script src="2016electionsshenanigans.js" type="text/javascript"></script>   
+    <!-- Plot.ly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <noscript>Warning: the functionality of this site requires use of javascript. In order to use this site please enable javascript on your browser.</noscript>
 </body>
 </html>
