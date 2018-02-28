@@ -85,9 +85,9 @@ $(document).ready(function () {
                 var hillary1 = "Hillary";
                 //get all post dates, put into two seperate arrays with no times just dates.
                 $.each(postsArray, function (index, post) {                   
-                    if (post.text != null) {
+                    if (post.text != null && post.created_str != null) {
                         var text = post.text;
-                        if (post.created_str != null && post.created_str != "" && post.created_str != "undefined" && (text.indexOf(hillary) > -1 || text.indexOf(hillary1) > -1 && !text == null)) {
+                        if (text.indexOf(hillary) > -1 || text.indexOf(hillary1) > -1) {
                             var date = post.created_str;
                             dateArrayOriginal.push(date.substring(0,7));
                             dateArray.push(date.substring(0,7));
@@ -118,8 +118,8 @@ $(document).ready(function () {
                 //the values for this chart were generated through the code above, manually extracted from consolelog (see immediately above to duplicate).
                 var data3 = [
                 {
-                    x: ['2015-06','2015-10','2015-11','2015-12','2016-02','2016-03','2016-06','2016-07','2016-08','2016-09','2016-10','2016-11','2016-12','2017-01','2017-02','2017-03'],
-                    y: [3,10,1,4,2,4,23,32,129,142,108,7,12,1,4],
+                    x: ['2015-02','2015-03','2015-04','2015-05','2015-06','2015-07','2015-08','2015-09','2015-10','2015-11','2015-12','2016-01','2016-02','2016-03','2016-04','2016-05','2016-06','2016-07','2016-08','2016-09','2016-10','2016-11','2016-12','2017-01','2017-02','2017-03','2017-04','2017-07','2017-08'],
+                    y: [21,4,57,62,78,14,19,5,26,55,101,55,155,147,16,67,131,964,1781,6218,4474,2205,283,258,72,102,9,6,2],
                     type: 'bar'
                 }
                 ];
